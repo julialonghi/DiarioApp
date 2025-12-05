@@ -6,52 +6,24 @@ Ao entrar no aplicativo, é exibida uma tela com "Meus Diários", onde todos os 
 
 Algumas das funcionalidades do aplicativo incluem o uso de Animations, em que, ao criar um novo diário, a imagem dentro do card balança horizontalmente para chamar a atenção do usuário, mostrando que ele foi criado. Outra funcionalidade é o uso da Apple Intelligence para gerar tags a partir do que foi escrito, ou seja, o modelo irá analisar os textos e descreverá os principais tópicos contidos no mesmo. Além do uso de Extensions, que apesar de não serem uma funcionalidade, facilitam muito a construção e a organização do código desenvolvido.
 
-## Desenvolvimento
-### Extensions
-Foram utilizadas extensions durante todo o código para facilitar o desenvolvimento do app, já que essas estruturas podem ser reutilizadas, mantendo uma organização e eficiência maior ao código.
-```swift
-extension Color {
-    static let fundoDiario = Color(.systemGray6)
-    static let sombraDiario = Color(.systemGray3)
-}
-```
-```swift
-extension View {
-    func estiloCartaoDiario() -> some View {
-        self
-            .padding()
-            .frame(maxWidth: .infinity, minHeight: 150)
-            .background(Color.fundoDiario)
-            .cornerRadius(16)
-            .shadow(color: .sombraDiario.opacity(0.4), radius: 4, x: 0, y: 2)
-    }
-}
+## Interface
+-> Tela Inicial
 
-```
-```swift
-enum EstiloTipografia {
-    case h1, h2, h3, corpo
-}
+<img width="301" height="655" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-05 at 11 10 38" src="https://github.com/user-attachments/assets/8dcce953-b6ac-40d6-b0a6-fb62f86ed5f0" />
 
-extension View {
-    func tipografia(_ estilo: EstiloTipografia) -> some View {
-        switch estilo {
-        case .h1:
-            return self.font(.system(size: 32, weight: .bold))
-        case .h2:
-            return self.font(.system(size: 24, weight: .semibold))
-        case .h3:
-            return self.font(.system(size: 18, weight: .medium))
-        case .corpo:
-            return self.font(.system(size: 16))
-        }
-    }
-}
-```
-```swift
-extension Date {
-    func apenasDia() -> Date {
-        Calendar.current.startOfDay(for: self)
-    }
-}
-```
+
+-> Criação de um novo Diário
+
+<img width="301" height="655" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-05 at 11 11 08" src="https://github.com/user-attachments/assets/e018ba9c-5b87-4f3a-9936-55427df74132" />
+<img width="301" height="655" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-05 at 11 11 16" src="https://github.com/user-attachments/assets/0a515762-e4e3-45ba-94cb-b9583732f61c" />
+<img width="301" height="655" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-05 at 11 13 12" src="https://github.com/user-attachments/assets/3b97fcf8-0c4e-4477-b14f-2f45434b4be6" />
+
+
+-> Anotações e uso da Apple Intelligence
+
+<img width="301" height="655" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-05 at 11 12 46" src="https://github.com/user-attachments/assets/d2e9207a-a874-4b8c-84b1-32cc08668e70" />
+
+## Dispositivos Suportados
+Por se tratar de um app com o uso de Apple Intelligence, ele só é compatível com modelos de iPhone 15 Pro e superioes, já que os anterioes não possuem o sistema de inteligência necessário. Além dos dispositivos estarem na versão iOS 26, para que todas as funcionalidades funcionem de maneira correta.
+
+## Organização de pastas e arquivos
