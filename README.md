@@ -27,3 +27,22 @@ Algumas das funcionalidades do aplicativo incluem o uso de Animations, em que, a
 Por se tratar de um app com o uso de Apple Intelligence, ele só é compatível com modelos de iPhone 15 Pro e superioes, já que os anterioes não possuem o sistema de inteligência necessário. Além dos dispositivos estarem na versão iOS 26, para que todas as funcionalidades funcionem de maneira correta.
 
 ## Organização de pastas e arquivos
+Para uma melhor organização no código, foram criadas diversas pastas:
+
+Diario -> pasta do projeto inteiro, onde ficam todos os arquivos e pastas;
+
+Diario.xcodeproj -> arquivo que o Xcode usa para abrir o projeto;
+
+Diario -> agrupamento do código desenvolvido;
+
+Extensions -> arquivos que adicionam funcionalidades extras (ShakeEffect.swift - efeito de balançar ao card)
+
+Models -> modelos das informações do app, onde é definido como é um diário e a sua entrada, o modelo de tags e as regras para salvar as informações do diário;
+
+ViewModels -> onde tudo é arrumado antes de aparecer na tela (DiarioDetailViewModel.swift -> controla os dados da tela de detalhes do diário; TagGenerator.swift -> cria ou sugere tags automaticamente para as entradas do diário, onde fica o prompt);
+
+Views -> a parte visual do app (CartaoDiario.swift -> o cartão que mostra um diário na lista; ListaDiariosView.swift -> a tela com todos os diários; DiarioDetailView.swift -> a tela que mostra um diário aberto; BotaoAdicionarDiario.swift -> o botão de criar novo diário);
+
+Diario.entitlements -> diz ao iOS quais permissões o app usa, como o uso da Apple Intelligence;
+
+DiarioApp.swift -> é o arquivo principal do aplicativo.
